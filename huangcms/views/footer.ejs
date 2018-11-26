@@ -1,0 +1,14 @@
+<!-- 公共的页面底部 -->
+
+<div id="footer">
+  <div class="layout">
+    <p class="a">
+		<% items.forEach(function(val){ %>
+				<a href="/item/<%=val._id%>"><%=val.name%></a>|
+			<% })%>
+    	</p>
+    <p>Copyright Reserved 2018-2018 皇甫书宇 版权所有 More Templates</p>
+  </div>
+</div>  
+</body>
+</html>

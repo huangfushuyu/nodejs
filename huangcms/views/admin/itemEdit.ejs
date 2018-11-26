@@ -1,0 +1,59 @@
+<% include header %>
+
+	<div class="header">
+		<!-- 页面标题 -->
+		<h1 class="page-header">编辑栏目</h1>
+		<!-- 路径导航 -->
+		<ol class="breadcrumb">
+			<li>
+				<a href="#">栏目管理</a>
+			</li>
+			<li class="active">编辑栏目</li>
+		</ol> 
+		<!-- 路径导航 end -->
+	</div>
+		
+	<div id="page-inner">
+		<div class="dashboard-cards">
+			<div class="row">
+				<form class="itemAdd" action="/admin/itemUpdate" method="post">
+					<input type="hidden" name="_id" value="<%=item._id%>">
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="last_name" type="text" class="validate" name="order" value="<%=item.order%>">
+							<label for="last_name">栏目序号</label>
+						</div>
+					</div>
+					<!-- <div class="row">
+						<div class="input-field col s12">
+							<input id="last_name" type="text" class="validate" name="type" value="<%=item.type%>">
+							<label for="last_name">栏目类型</label>
+						</div>
+					</div> -->
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="password" type="text" class="validate" name="name" value="<%=item.name%>">
+							<label for="password">栏目名称</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea id="textarea1" class="materialize-textarea" name="info"><%=item.info%></textarea>
+							<label for="textarea1">栏目介绍</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s5"></div>	
+						<div class="input-field col s2">
+							<button class="btn waves-effect waves-light btn-group-justified" type="submit" name="action">提交
+								<i class="material-icons right">send</i>
+							</button>
+						</div>
+						<div class="col s5"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<% include footer %>

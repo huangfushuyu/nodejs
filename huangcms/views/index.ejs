@@ -1,0 +1,148 @@
+<% include header %>
+
+<!--内容部分-->
+<div id="content">
+  
+  <div class="layout ptb_20">
+    <div class="index_left">
+		<div class="title_t">
+			<a href="作品欣赏.html" class="more"></a>
+			<i class="i1"></i>
+			<span class="t">作品欣赏</span>
+		</div>
+		<div class="plr_10">
+
+			<ul class="ul1">
+				<%items.forEach(function(val){ %>
+					<% val.articlelist.forEach(function(articledata){ %>
+						<li>
+							<a href="article/<%=articledata._id%>">
+								<img src="/<%=articledata.imgurl%>" />
+								<p><%=articledata.title%></p>
+							</a>
+						</li>
+					<%})%>
+				<%})%>
+			</ul>
+			<dl class="dl1 mt_10">
+				<dt>
+					<% items[0].articlelist.forEach(function(articledata){ %>
+					<a href="article/<%=articledata._id%>">
+						<img src="/<%=articledata.imgurl%>" />
+						<p><%=articledata.title%></p>
+					</a>
+					<%})%>
+				</dt>
+				<dd>
+					<% items[1].articlelist.forEach(function(articledata){ %>
+					<a href="article/<%=articledata._id%>">
+						<img src="/<%=articledata.imgurl%>" />
+						<p><%=articledata.title%></p>
+					</a>
+					<%})%>
+				</dd>
+			</dl>
+			<div class="div1 mt_10">
+				<% items[2].articlelist.forEach(function(articledata){ %>
+					<a href="article/<%=articledata._id%>">
+						<img src="/<%=articledata.imgurl%>" />
+						<p><%=articledata.title%></p>
+					</a>
+				<%})%>
+			</div>
+		</div>
+    </div>
+    <div class="index_right">
+		<div class="title_t">
+			<a href="item/<%=items[0]._id%>" class="more"></a>
+			<i class="i2"></i>
+			<span class="t"><%=items[0].name%></span>
+		</div>
+		<ul class="ul2 plr_10">
+			<% items[0].articlelist.forEach(function(articledata){ %>
+		    	<li>
+		    		<a href="article/<%=articledata._id%>">
+		    			<%=articledata.title%>
+		    		</a>
+		    	</li>
+	    	<% }) %>
+		</ul>
+		<div class="title_t mt_10">
+			<a href="item/<%=items[1]._id%>" class="more"></a>
+			<i class="i3"></i>
+			<span class="t"><%=items[1].name%></span>
+		</div>
+		<ul class="ul2 plr_10">
+			<% items[1].articlelist.forEach(function(articledata){ %>
+		    	<li>
+		    		<a href="article/<%=articledata._id%>">
+		    			<%=articledata.title%>
+		    		</a>
+		    	</li>
+	    	<% }) %>
+		</ul>
+		<div class="title_t mt_10">
+			<a href="item/<%=items[2]._id%>" class="more"></a>
+			<i class="i4"></i>
+			<span class="t"><%=items[2].name%></span>
+		</div>
+		<ul class="ul2 plr_10">
+			<% items[2].articlelist.forEach(function(articledata){ %>
+		    	<li>
+		    		<a href="article/<%=articledata._id%>">
+		    			<%=articledata.title%>
+		    		</a>
+		    	</li>
+	    	<% }) %>
+		</ul>
+		<div class="title_t mt_10">
+			<a href="item/<%=items[3]._id%>" class="more"></a>
+			<i class="i5"></i>
+			<span class="t"><%=items[3].name%></span>
+		</div>
+		<ul class="ul2 plr_10">
+			<% items[3].articlelist.forEach(function(articledata){ %>
+		    	<li>
+		    		<a href="article/<%=articledata._id%>">
+		    			<%=articledata.title%>
+		    		</a>
+		    	</li>
+	    	<% }) %>
+		</ul>
+    </div>
+    <div class="clear"></div>
+    <div class="anecdote_box mt_10">
+		<ul class="ul3">
+			<% links.forEach(function(val){%>
+				<li>
+					<a href="<%=val.info%>">
+						<p><%=val.name%></p>
+					</a>
+				</li>
+			<%})%>
+				
+		
+		</ul>
+    </div>
+    <div class="portrait_box mt_10">
+		<div class="title_t">
+			<a href="影相集珍.html" class="more"></a>
+			<i class="i6"></i>
+			<span class="t">文章集珍</span>
+		</div>
+		<ul class="ul4">
+			<%items.forEach(function(val){ %>
+				<% val.articlelist.forEach(function(articledata){ %>
+					<li>
+						<a href="article/<%=articledata._id%>">
+							<img src="/<%=articledata.imgurl%>" />
+						</a>
+					</li>
+				<%})%>
+			<%})%>
+		</ul>
+    </div>
+  </div>
+</div>
+<!--内容部分 end-->
+<% include footer %>

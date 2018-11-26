@@ -1,0 +1,57 @@
+/*添加栏目*/
+.itemAdd .row{
+	margin-left:9px;
+}
+/*发布文章*/
+.ipt input,select,textarea{
+    background-color:#fff; 
+    border: 1px solid #ccc;
+    border-radius: 0;
+    outline: none;
+    height: 4rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.articleSend .input-group{
+	margin-bottom:10px;
+}
+/*文章列表*/
+.table img{
+    width:100px;
+}
+.table th,td{
+    vertical-align:middle !important;
+    text-align:center;
+}
+.articleImageEdit img{
+    width:100px;
+}
+#arcnav{
+    background:transparent;
+    box-shadow:none;
+    text-align:center;
+}
+
+/*管理员添加页面*/
+.formAdd .input-group{
+    margin-bottom:10px;
+}
+.formAdd .input-group-addon{
+    background:#f44336;
+    color:#fff;
+}
+.formAdd input{
+    background:#fff;
+    border:1px solid #ccc;
+}
+.formAdd .btn{
+   background:#fa6366;
+   border:none;
+}
